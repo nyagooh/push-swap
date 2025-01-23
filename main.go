@@ -48,3 +48,9 @@ if len(num) > 1  {
 return num
 }
 //pa: Take the top number from stack b and put it on top of stack a.
+func pa (a[]int,b[]int) ([]int,[]int){
+	num := b[0]
+	b = b[1:]
+	a=append([]int{num}, a...)
+	return a,b
+}
